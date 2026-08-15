@@ -481,21 +481,59 @@ footer p {
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-    .timeline::before {
-        left: 65px;
+    .hero {
+        min-height: 400px;
+        height: auto;
+        padding: 4rem 1rem;
     }
 
-    .timeline-item::before {
-        left: 60px;
-    }
-
-    .timeline-item .time {
-        min-width: 50px;
+    .route-preview {
         font-size: 0.75rem;
     }
 
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item::before {
+        display: none;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-item .time {
+        min-width: unset;
+        text-align: left;
+        font-size: 0.8rem;
+        padding: 0;
+        color: #667eea;
+        font-weight: 700;
+    }
+
     .timeline-item .details {
+        margin-left: 0;
         padding: 1rem;
+    }
+
+    .timeline-item .details h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-item .details p,
+    .timeline-item .details ul li {
+        font-size: 0.85rem;
     }
 
     .day-header {
@@ -504,9 +542,23 @@ footer p {
         gap: 0.5rem;
     }
 
+    .day-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .day-card {
+        margin-bottom: 2.5rem;
+    }
+
     .nav-container {
         justify-content: flex-start;
-        padding: 0.6rem;
+        padding: 0.5rem 0.6rem;
+        gap: 0.3rem;
+    }
+
+    .sticky-nav a {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.8rem;
     }
 
     .nav-detail {
@@ -525,36 +577,61 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .ref-card table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .food-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .must-eat {
+        padding: 1rem;
+    }
+
+    .quick-ref {
+        padding: 2rem 0;
+    }
+
+    .quick-ref h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ref-grid {
+        padding: 0 1rem;
+    }
+
+    .pdf-links {
+        font-size: 0.75rem;
+    }
+
+    .tip {
+        font-size: 0.8rem !important;
+    }
 }
 
-@media (max-width: 480px) {
-    .timeline {
-        padding-left: 0;
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    .timeline::before {
-        left: 50px;
+    .subtitle {
+        font-size: 1rem;
     }
 
-    .timeline-item::before {
-        left: 45px;
+    .food-grid {
+        grid-template-columns: 1fr;
     }
 
-    .timeline-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .timeline-item .time {
-        text-align: left;
-        padding-left: 65px;
+    .day-info h2 {
+        font-size: 1.2rem;
     }
 
     .timeline-item .details {
-        margin-left: 65px;
+        padding: 0.8rem;
     }
 }
 
