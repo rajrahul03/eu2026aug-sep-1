@@ -409,6 +409,76 @@ footer p {
     margin-bottom: 0.3rem;
 }
 
+/* === NAV DAY LABELS === */
+.nav-day {
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.nav-detail {
+    font-weight: 400;
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+/* === FLOATING QUICK REF BUTTON === */
+.fab-quickref {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+    z-index: 200;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fab-quickref:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.7);
+}
+
+/* === PDF DOWNLOAD LINKS === */
+.pdf-links {
+    margin-top: 0.6rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.pdf-links a {
+    color: #a8edea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.pdf-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* === REF CARD LINKS === */
+.ref-card table a {
+    color: #a8edea;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.ref-card table a:hover {
+    color: #fff;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .timeline::before {
@@ -437,6 +507,18 @@ footer p {
     .nav-container {
         justify-content: flex-start;
         padding: 0.6rem;
+    }
+
+    .nav-detail {
+        display: none;
+    }
+
+    .fab-quickref {
+        bottom: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
     }
 
     .ref-grid {
